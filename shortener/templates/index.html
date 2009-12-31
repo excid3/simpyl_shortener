@@ -1,0 +1,16 @@
+<html>
+<body>
+    {% if error %}
+        <strong>{{error}}</strong>
+    {% endif %}
+    {% if new_url %}
+        <a href="{{new_url}}">{{new_url}}</a>
+    {% endif %}
+    <form name="shortener" method="post">
+        <input type="text" name="url" size="100"></textarea>
+        <br />
+        <input type="submit" name="submit" value="Shorten">
+        <!--<input type="submit" name="submit" value="Lengthen">-->
+    </form>
+</body>
+</html>
