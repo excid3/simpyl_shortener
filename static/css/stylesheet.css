@@ -1,0 +1,63 @@
+body {
+    /*background-color: #4E4634;*/
+    background-color: #333333;
+    font-family: "Lucida Grande",Arial,Sans-serif;
+    margin: 10em auto;
+    width: 600px;
+}
+
+h1 {
+    color: #DDDDDD;
+    font-size: 2em;
+    text-shadow: 1px 1px 0 #000000;
+	margin: 0 0 10px 0;
+}
+
+form {
+	background: #FFFFFF;
+	padding: 12px 10px 10px 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+#error {
+	border: 1px solid #D8000C;
+	background-color: #FFBABA;
+	color: #D8000C;
+	font-size: 11px;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+
+.input {
+    padding: .3em;
+    width: 440px;
+}
+
+.submit {
+	display: inline-block;
+	width: 120px;
+	height: 30px;
+	margin: 0 .4em 0 0 !important;
+	padding: 1px 0 5px !important;
+	border: 0;
+	color: #445;
+	font-size: 11px;
+	line-height: 1;
+	text-align: center;
+	text-decoration: none!important;
+	text-shadow: #FFF 1px 1px 0;
+	background: url(../images/b-submit.png) no-repeat 0 0;
+	cursor: pointer;
+}
+.submit:hover 	{ background-position: 0 -50px; color: #223; }
+.submit:active { background-position: 0 -100px; color: #000; }
+
+#footer, #footer a { color: #DDDDDD; }
+#footer {
+	float:right;
+	font-size: 12px;
+	margin-top: 10px;
+	text-shadow: 1px 1px 0 #000000;
+}
+#footer a { text-decoration: none; }
+#footer a:hover{ text-decoration: underline; }

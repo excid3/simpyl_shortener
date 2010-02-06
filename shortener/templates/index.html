@@ -1,16 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
 <html>
-<body>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>simpyl shortener</title>
+    <link href="/static/css/stylesheet.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+
+    <h1>Simpyl Shortener</h1>
     {% if error %}
-        <strong>{{error}}</strong>
+        <div id="error">{{error}}</div>
     {% endif %}
     {% if new_url %}
         <a href="{{new_url}}">{{new_url}}</a>
     {% endif %}
     <form name="shortener" method="post">
-        <input type="text" name="url" size="100"></textarea>
-        <br />
-        <input type="submit" name="submit" value="Shorten">
+        <input type="text" name="url" class="input" />
+        <input type="submit" name="submit" value="Shorten" class="submit">
         <!--<input type="submit" name="submit" value="Lengthen">-->
     </form>
+    
+	<div id="footer">
+		<a href="http://github.com/excid3/simpyl_shortener">Code</a> | 
+		<a href="http://excid3.com">Developer</a> | 
+		<a href="http://excid3.com">Designer</a>
+	</div>
+	
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+    var pageTracker = _gat._getTracker("UA-8399719-5");
+    pageTracker._trackPageview();
+    } catch(err) {}</script>
+
 </body>
 </html>

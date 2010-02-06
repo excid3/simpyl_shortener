@@ -49,7 +49,7 @@ def main(request):
         else:
             error = "Invalid http url: %s" % url
     
-    t = loader.get_template('shortener/templates/index.html')
+    t = loader.get_template('index.html')
     c = Context({
         'new_url': new_url,
         'error': error,
@@ -64,7 +64,7 @@ def fetch(request):
         p = Relation.objects.get(internal_url=url)
         return http.HttpResponseRedirect(p.external_url)
     except:
-        t = loader.get_template('shortener/templates/404.html')
+        t = loader.get_template('404.html')
         c = Context(locals())
         return http.HttpResponseNotFound(t.render(c))
 

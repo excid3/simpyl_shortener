@@ -11,6 +11,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+from django.conf import settings
 from django.conf.urls.defaults import *
 
 # Uncomment the next two lines to enable the admin:
@@ -28,5 +29,9 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     # (r'^admin/', include(admin.site.urls)),
     (r'^$', 'simpyl_shortener.shortener.views.main'),
+    (r'^static/(?P<path>.*)$', 'django.views.static.serve',
+      {'document_root': settings.MEDIA_ROOT}),
+      
+    # Anything else we check for a shortened url
     (r'', 'simpyl_shortener.shortener.views.fetch'),
 )
