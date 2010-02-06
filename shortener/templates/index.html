@@ -1,23 +1,26 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>simpyl shortener</title>
-    <link href="/static/css/stylesheet.css" rel="stylesheet" type="text/css">
+    <link href="/static/css/stylesheet.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
 
     <h1>Simpyl Shortener</h1>
+
     {% if error %}
         <div id="error">{{error}}</div>
     {% endif %}
+
     {% if new_url %}
-        <a href="{{new_url}}">{{new_url}}</a>
+        <div id="new">Your new url: <a href="{{new_url}}">{{new_url}}</a></div>
     {% endif %}
-    <form name="shortener" method="post">
-        <input type="text" name="url" class="input" />
-        <input type="submit" name="submit" value="Shorten" class="submit">
+
+    <form name="shortener" action="/" method="post">
+        <input type="text" name="url" class="url" />
+        <input type="submit" name="submit" value="Shorten" class="submit" />
         <!--<input type="submit" name="submit" value="Lengthen">-->
     </form>
     
@@ -37,5 +40,5 @@
     pageTracker._trackPageview();
     } catch(err) {}</script>
 
-</body>
+  </body>
 </html>

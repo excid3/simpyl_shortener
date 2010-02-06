@@ -19,16 +19,23 @@ form {
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 }
-#error {
-	border: 1px solid #D8000C;
-	background-color: #FFBABA;
-	color: #D8000C;
+
+#error, #new {
+	border: 1px solid;
 	font-size: 11px;
 	padding: 5px;
 	margin-bottom: 10px;
 }
+#error {
+	background-color: #FFBABA;
+	color: #D8000C;
+}
+#new , #new a{
+	background-color: #DFF2BF;
+	color: #4F8A10
+}
 
-.input {
+.url {
     padding: .3em;
     width: 440px;
 }
