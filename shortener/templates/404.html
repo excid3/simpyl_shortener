@@ -1,19 +1,38 @@
-<html>
-<body>
-<strong>No such url</strong><br />
-<a href="/">Go to homepage</a>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>simpyl shortener</title>
+    <link href="/static/css/stylesheet.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+
+    <h1><a href="/">Simpyl Shortener</a></h1>
+
+	<div id="error">Short URL does not exist.</div>
+
+    <form name="shortener" action="/" method="post">
+        <input type="text" name="url" class="url" />
+        <input type="submit" name="submit" value="Shorten" class="submit" />
+        <!--<input type="submit" name="submit" value="Lengthen">-->
+    </form>
     
-Simpyl Shortener by <a href="http://excid3.com">Chris Oliver</a>
+	<div id="footer">
+		<a href="http://github.com/excid3/simpyl_shortener">Code</a> | 
+		<a href="http://excid3.com">Developer</a> | 
+		<a href="http://excid3.com">Designer</a>
+	</div>
+	
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+    var pageTracker = _gat._getTracker("UA-8399719-5");
+    pageTracker._trackPageview();
+    } catch(err) {}</script>
 
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-8399719-5");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-
-</body>
+  </body>
 </html>

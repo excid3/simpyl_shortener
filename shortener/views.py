@@ -47,7 +47,7 @@ def main(request):
                 r.save()
                 
         else:
-            error = "Invalid http url: %s" % url
+            error = "Invalid url. Urls must start with \"http://\""
     
     t = loader.get_template('index.html')
     c = Context({

@@ -6,11 +6,12 @@ body {
     width: 600px;
 }
 
-h1 {
+h1, h1 a {
     color: #DDDDDD;
-    font-size: 2em;
+    font-size: 32px;
     text-shadow: 1px 1px 0 #000000;
 	margin: 0 0 10px 0;
+	text-decoration: none;
 }
 
 form {
