@@ -5,8 +5,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>simpyl shortener</title>
     <link href="/static/css/stylesheet.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+	function init() { document.shortener.url.focus(); }
+	</script>
   </head>
-  <body>
+  <body onload="init()">
 
     <h1><a href="/">Simpyl Shortener</a></h1>
 
@@ -15,7 +18,7 @@
     {% endif %}
 
     {% if new_url %}
-        <div id="new">Your new url: <a href="{{new_url}}">{{new_url}}</a></div>
+        <div id="new">Your new url: <a href="{{new_url}}" id="newurl">{{new_url}}</a></div>
     {% endif %}
 
     <form name="shortener" action="/" method="post">
