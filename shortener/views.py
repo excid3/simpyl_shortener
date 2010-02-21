@@ -63,15 +63,15 @@ def fetch(request):
     try:
         p = Relation.objects.get(internal_url=url)
         return http.HttpResponseRedirect(p.external_url)
-    except:
+    except Exception, e:
         t = loader.get_template('404.html')
-        c = Context(locals())
+        c = Context({"error": e})
         return http.HttpResponseNotFound(t.render(c))
 
 ###############################################################################
 
 def make_url(count):
-    charset = "01234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    charset = "01234567890abcdefghijklmnopqrstuvwxyz"
     base = len(charset)
 
     string = ''
